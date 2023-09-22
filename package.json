@@ -1,0 +1,8 @@
+{
+  "name": "capstone2-shell",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:BrianLe188/capstone2-shell.git",
+  "author": "brian.h <anhkun123456@gmail.com>",
+  "license": "MIT"
+}
