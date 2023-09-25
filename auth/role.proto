@@ -1,20 +1,20 @@
 syntax = 'proto3';
 
-package subject;
+package role;
 
-message Subject {
+message Role {
   optional string id = 1;
   string name = 2;
 }
 
-message UpdateSubject {
+message UpdateRole {
   string id = 1;
-  Subject body = 2;
+  Role body = 2;
 }
 
-message SubjectResponse {
+message RoleResponse {
   oneof response {
-    Subject subject = 1;
+    Role role = 1;
     string error = 2;
   }
 }

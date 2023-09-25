@@ -1,0 +1,1 @@
+cp env/.env ../$1/.env
