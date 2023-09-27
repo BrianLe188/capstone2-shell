@@ -8,6 +8,11 @@ message Majors {
   string educationalLevel = 3;
   string industryCode = 4;
   string specializedCode = 5;
+  optional string description = 6;
+}
+
+message Majorss {
+  repeated Majors majors = 1;
 }
 
 message UpdateMajors {
@@ -18,6 +23,13 @@ message UpdateMajors {
 message MajorsResponse {
   oneof response {
     Majors major = 1;
+    string error = 2;
+  }
+}
+
+message MajorssResponse {
+  oneof response {
+    Majorss majors = 1;
     string error = 2;
   }
 }
