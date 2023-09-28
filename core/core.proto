@@ -1,6 +1,6 @@
 syntax = 'proto3';
 
-package admission;
+package core;
 
 import './module.proto';
 import './member-school.proto';
@@ -8,7 +8,7 @@ import './majors.proto';
 import './subject.proto';
 import './subject-block.proto';
 
-service Admission {
+service Core {
   rpc Default(GreetRequest) returns (GreetResponse) {}
 
   rpc CreateModule(module.Module) returns (module.ModuleResponse) {}
@@ -30,6 +30,7 @@ service Admission {
   rpc UpdateSubject(subject.UpdateSubject) returns (subject.SubjectResponse) {}
   rpc DeleteSubject(Target) returns (Message) {}
   rpc GetAllSubject(RequestEmpty) returns (subject.SubjectsResponse) {}
+  rpc ImportSubject(Strings) returns (Message) {}
 
   rpc CreateSubjectBlock(subject_block.SubjectBlock) returns (subject_block.SubjectBlockResponse) {}
   rpc UpdateSubjectBlock(subject_block.UpdateSubjectBlock) returns (subject_block.SubjectBlockResponse) {}
